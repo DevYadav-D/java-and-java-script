@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Update Todo Task</h1>
+<form type="/update/{{form.id}}" method="POST">
+    {{form.id}}
+    {{form.content}} 
+    {{form.submit}} 
+</form>
+
+{% endblock content %}

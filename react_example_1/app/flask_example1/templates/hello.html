@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    hello page
+   <span>{{request_method}}</span>
+    <form method="POST" action="/">
+        <input type="text" placeholder="name" name="first_name">
+        <input type="text" placeholder="last" name="last_name">
+        <input type="submit">
+
+    </form>
+    new table
+    <hr>
+    {% for i in todo %}
+        <ul>
+            {{i.id}}
+            and
+            {{i.content}}
+        </ul>
+    {% endfor %}
+{% endblock content %}

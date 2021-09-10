@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+    {% if datalist|length <1 %}
+        There are no task create the new task!
+    {% else %}
+        {% for i in datalist %}
+        <br>
+        Id number: {{i.id}}, Content:  {{i.content}} <a href="update/{{i.id}}">Update</a><a href="delete/{{i.id}}">Delete</a>
+        {% endfor %}
+    {% endif %}
+    <form type="/todo ", method="POST">
+        {{ form.hidden_tag() }}
+         {{form.content}} 
+         {{form.submit}}  
+    </form>
+{% endblock content%}
